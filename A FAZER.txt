@@ -1,0 +1,7 @@
+dentro do repositorio:
+npm install
+ionic serve
+
+Falta fazer:
+Criar um data base nosso, ainda estamos usando o do cara la(seu amigo)
+E arrumar upload de foto (não importante)

@@ -1,0 +1,16 @@
+<ion-header>
+
+  <custom-logged-header [title]="view | capitalize:true"> </custom-logged-header>
+
+</ion-header>
+
+<ion-content padding>
+    <button ion-button (click)="navCtrl.push(trabalhoPage)" full> Adicionar </button>
+  <div [ngSwitch]="view">
+    <ion-list *ngSwitchCase="'trabalho'" no-lines>
+      <button ion-item *ngFor="let trabalho of trabalhos | async" (click)="onTrabalhoOpen(trabalho)">
+        <h2> {{ trabalho.titulo }} </h2>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

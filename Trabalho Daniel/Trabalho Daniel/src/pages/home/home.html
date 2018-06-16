@@ -1,0 +1,16 @@
+<ion-header>
+
+  <custom-logged-header [title]="view | capitalize:true"> </custom-logged-header>
+
+</ion-header>
+
+<ion-content padding>
+    <button ion-button (click)="navCtrl.push(relatoriosPages)" full> Adicionar </button>
+  <div [ngSwitch]="view">
+    <ion-list *ngSwitchCase="'relatorios'" no-lines>
+      <button ion-item *ngFor="let relatorios of relatorios | async" (click)="onRelatoriosOpen(relatorios)">
+        <h2> {{ relatorios.titulo }} </h2>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

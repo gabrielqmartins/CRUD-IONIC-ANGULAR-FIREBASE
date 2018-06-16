@@ -1,0 +1,46 @@
+s<!--
+  Generated template for the RelatoriosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Relatorios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="relatoriosForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
+
+    <ion-item>
+      <ion-label floating>Título</ion-label>
+      <ion-input type="text" formControlName="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descrição</ion-label>
+      <ion-input type="text" formControlName="descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Aluno 1</ion-label>
+      <ion-input type="text" formControlName="aluno1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Aluno 2</ion-label>
+      <ion-input type="text" formControlName="aluno2"></ion-input>
+    </ion-item>
+
+    <br>
+
+    <button ion-button full type="submit" [disabled]="relatoriosForm.invalid"> Salvar </button>
+
+    <button ion-button full type="button" color="danger" *ngIf="relatorios.$key" (click)="delete()"> Excluir </button>
+
+  </form>
+</ion-content>
