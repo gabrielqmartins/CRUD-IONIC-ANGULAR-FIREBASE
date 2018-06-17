@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button (click)="navCtrl.push(trabalhoPage)" full> Adicionar </button>
   <div [ngSwitch]="view">
     <ion-list *ngSwitchCase="'trabalho'" no-lines>
       <button ion-item *ngFor="let trabalho of trabalhos | async" (click)="onTrabalhoOpen(trabalho)">
@@ -13,4 +12,5 @@
       </button>
     </ion-list>
   </div>
+  <button ion-button (click)="navCtrl.push(trabalhoPage)" full> Adicionar</button>
 </ion-content>
